@@ -1,0 +1,238 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: #fff;
+  
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(148, 6, 6, 0.7);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo dans le coin supérieur gauche */
+header .logo {
+    position: absolute; /* Positionner le logo de manière absolue */
+    top: 20px;           /* Espacement du logo par rapport au haut */
+    left: 20px;          /* Espacement du logo par rapport à la gauche */
+    height: 10px;        /* Fixer la hauteur du logo à 10px */
+    width: 10px;         /* Fixer la largeur du logo à 10px */
+}
+
+/* Autres styles pour l'image du logo */
+header .logo img {
+    width: 130px; /* L'image s'adapte à la largeur du conteneur */
+    height: 30px; /* La hauteur est ajustée automatiquement pour conserver les proportions */
+}
+
+/* Styles du titre dans l'en-tête */
+header .logo h1 {
+    font-size: 24px;
+    color: #e50914;
+}
+
+/* Menu de navigation */
+header nav {
+    margin-left: auto; /* Cette ligne déplace le menu à l'extrême droite */
+}
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+.login-container {
+    text-align: center;
+}
+
+/* Style du bouton Se connecter */
+.login-button {
+    /*background-color: red; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 12px 30px; /* Espace intérieur pour donner de la taille au bouton */
+    font-size: 18.5px; /* Taille du texte */
+    cursor: pointer; /* Afficher un curseur pointer au survol */
+    border-radius: 25px; /* Arrondir les coins du bouton */
+    /*text-transform: uppercase; /* Mettre le texte en majuscule */
+    /*transition: background-color 0.3s; /* Transition douce pour la couleur de fond */
+    text-decoration: none
+}
+
+/* Effet au survol du bouton */
+.login-button:hover {
+    /*background-color: darkgoldenrod; /* Changer la couleur de fond au survol */
+    color: #111;
+}
+.button {
+    /*background-color: black; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    /*border: none; /* Pas de bordure */
+    text-decoration: none;
+    padding: 12px 30px; /* Espace intérieur pour donner de la taille au bouton */
+    font-size: 18.5px; /* Taille du texte */
+    /*cursor: pointer; /* Afficher un curseur pointer au survol */
+    /*border-radius: 25px; /* Arrondir les coins du bouton */
+    /*transition: background-color 0.3s; /* Transition douce pour la couleur de fond */
+}
+.button:hover {
+    /*background-color: rgb(27, 20, 20); /* Changer la couleur de fond au survol */
+    border-radius: 5px;
+    color: #111;
+}
+/* Style pour l'image de fond */
+.image-container {
+     /* Positionnement relatif pour le conteneur */
+    /*width: 50%; /* La largeur de l'image prendra toute la largeur de la fenêtre */
+    height: 70vh; /* La hauteur du conteneur sera de 100% de la fenêtre */
+    background-image: url('images/cassa.jpg');
+    background-size: cover; /* L'image couvre toute la fenêtre sans déformer */
+    background-position: center; /* Centrer l'image */ 
+    margin: 100px;
+    /*filter: blur(2px); /* Applique un flou à l'image */
+}
+
+/* Style pour le texte au-dessus de l'image */
+.text-overlay {
+    position: absolute; /* Positionnement absolu pour superposer le texte */
+    top: 50%; /* Placer le texte à la moitié de la hauteur */
+    left: 50%; /* Placer le texte au centre horizontalement */
+    transform: translate(-50%, -50%); /* Centrer parfaitement le texte */
+    color:white; /* Texte en blanc pour contraster avec l'image */
+    text-align: center; /* Centrer le texte */
+    font-family: "Brush Script MT," cursive, sans-serif; /* Choix de la police */
+    font-size: 35px;
+    z-index: 10;
+}
+
+/* Style pour les éléments de texte (optionnel) */
+
+
+.text-overlay p {
+    font-size: 2rem; /* Taille du paragraphe */
+    color: white;
+}
+
+
+header .logo {
+        
+    width:400px;         
+}
+
+
+/* Section des images */
+
+.images-container {
+        display: flex; /* Utilise Flexbox pour aligner les images horizontalement */
+        gap: 10px; /* Espace entre les boîtes d'images */
+        justify-content: center; /* Centre les boîtes horizontalement */
+    
+
+}
+.image {
+    width: 500px; /* Largeur du rectangle */
+    height: 300px; /* Hauteur du rectangle */
+    overflow: hidden; /* Cache tout débordement de l'image */
+    border-radius: 15px; /* Angle arrondi */
+    border: 2px solid #ccc; /* Bordure autour du rectangle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Couleur de fond des rectangles */
+}
+
+.image img {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: 100%; /* L'image prend toute la hauteur du conteneur */
+    object-fit: cover; /* L'image remplira le rectangle sans déformation */
+}
+
+
+.carousel h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    background-color: darkgoldenrod;
+    text-align: center;
+}
+.image:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 6px 12px yellow; /* Ombre plus marquée */
+}
+
+
+/* Section des catégories */
+.category:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+.categories {
+    padding: 40px 20px;
+}
+
+.categories h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: darkgoldenrod;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #e50914;
+}
+
+.category-films {
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+}
+
+.category-films .film img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.category-séries {
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+}
+
+.category-séries .série img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #141414;
+    color: #bbb;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
